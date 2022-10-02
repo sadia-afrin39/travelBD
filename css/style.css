@@ -1,0 +1,376 @@
+/*
+  Tasks:
+    1. Importing Fonts
+    2. Global Styles
+    2. Navbar
+    3. Header
+    4. offers
+    5. explore
+    6. Newsletter
+    7. contact
+    8. footer
+*/
+
+/* 1. Importing Fonts */
+@font-face {
+  src: url('../fonts/Raleway-Regular.ttf');
+  font-family: 'Raleway-Regular';
+}
+
+@font-face {
+  src: url('../fonts/Raleway-Medium.ttf');
+  font-family: 'Raleway-Medium';
+}
+
+/* 2. Global Styles */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway-Regular';
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+html {
+  font-size: 10px;
+  background-color: #F1F1F1;
+}
+
+
+.container {
+  max-width: 110rem;
+  margin: auto;
+  padding: 4rem 1.5rem 0;
+}
+
+section, footer, header {
+  margin-bottom: 3rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  object-fit: cover;
+}
+
+label {
+  margin-bottom: .5rem;
+}
+
+button, input {
+  padding: .8rem 1.6rem;
+  font-size: 1.6rem;
+	outline: none;
+}
+
+button , .btn{
+  background-color: #616161;
+  color: white;
+  cursor: pointer;
+   border: none;
+   outline: none;
+}
+
+button:hover, .contact button:hover, .newsletter-form-container button:hover {
+	background-color:#cbcbb3;
+	color:#000;
+}
+
+button:hover{
+	transition: background-color 0.3s ease;
+}
+
+.btn:hover, .contact button:hover, .newsletter-form-container button:hover {
+	box-shadow:2px 2px 3px #808080;
+	transition: background-color 0.3s ease;
+}
+
+input {
+  padding: .8rem 1rem;
+  background-color: transparent;
+  border: .1rem solid rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+
+button.active {
+  background-color: #f44336;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+/* 2. Navbar */
+
+.Raleway-500 a{
+  font-family: 'Raleway-Medium';
+  font-weight: 500;
+  color:red;
+}
+
+.Raleway-500 a:hover {
+	color:#fff;
+	background-color:red;
+	box-shadow:4px 2px 5px #808080;
+	transition: background-color 0.8s ease;
+}
+
+nav {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position:sticky ;
+  top:0;
+  z-index:1;
+}
+
+.logo {
+  color: #f44336;
+  font-size: 2rem;
+  text-shadow:1px 1px 5px  #808080;
+}
+
+.nav-list li {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+.nav-list li a{
+	  color: black;
+}
+
+.nav-list li a:hover {
+	border-bottom:3px solid red;
+}
+
+.nav-list li + li {
+  margin-left: 1rem;
+}
+
+.menu-bar {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.menu-bar svg {
+  font-size: 3rem;
+}
+
+/* 3. Header */
+header {
+  background: url('../images/london2.jpg');
+  background-position:100% 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.booking {
+  background-color: white;
+  width: 60%;
+  min-width: 30rem;
+} 
+
+.booking-header {
+  display: flex;
+  background-color: black;
+}
+
+.booking-body {
+  padding: 3rem 2rem;
+}
+
+.booking-body h2, .newsletter-container h2, .contact h2, .explore h2, .offers h2 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.from-to-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.from-to-container label, .booking-hotel p, .booking-rental label, .booking-rental p, .newsletter-form-container p, .newsletter-form-container label, .contact p, footer p, .explore p, .offers p {
+  font-size: 1.6rem;
+}
+
+.booking-hotel p, .booking-rental p {
+  margin-bottom: 1.5rem;
+}
+
+.discount {
+  padding: .5rem;
+  background-color: #ff5722;
+  color: white;
+}
+
+/* 4. offers */
+.offer-items, .sub-offer-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.offer-items {
+  margin-top: 2rem;
+}
+
+.offer-item {
+  position: relative;
+}
+
+.offer-item::before {
+  content: attr(place);
+ position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  color: white;
+  font-size: 1.8rem;
+
+}
+
+.offer-item img {
+  width: 100%;
+}
+
+/* 5. explore */
+.explore-items {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.explore-item {
+  background-color: white;
+}
+
+.explore-item img {
+  width: 100%;
+  height: 30rem;
+}
+
+.explore-item .details {
+  padding: 2rem;
+}
+
+.explore-item p:nth-child(2) {
+  color: #616161;
+}
+
+.explore-item p:nth-child(3) {
+  margin: 2rem 0;
+}
+
+.explore-item button {
+  background-color: transparent;
+  color: black;
+}
+
+.explore-item button:hover {
+  background-color: #ccc;
+}
+
+/* 6. Newsletter */
+.newsletter-form-container {
+  background-color: black;
+  padding: 4rem 1.5rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  background:#333333;
+  opacity:0.7;
+
+}
+
+.newsletter-form-container:hover {
+  background:#000;
+  opacity:1;
+}
+
+.newsletter-form-container h2, .newsletter-form-container p, .newsletter-form-container label {
+  color: white;
+}
+
+.newsletter-form-container p {
+  margin-bottom: 2rem;
+}
+
+.newsletter-form-container input, .contact input {
+  background-color: white;
+}
+
+.newsletter-form-container button {
+  background-color: #f44336;
+}
+
+/* 7. contact */
+.contact-details {
+  margin: 2rem 0 ;
+}
+
+.contact-details svg {
+  margin-right: 1.5rem;
+}
+
+.contact input {
+  padding: 1.6rem 1rem;
+}
+
+.contact button {
+  background-color: black;
+  color:white;
+  padding: 1.2rem 2rem;
+}
+
+/* 8. footer */
+footer {
+  text-align: center;
+}
+
+footer p:first-child {
+  font-size: 1.8rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+footer p, .social-icons svg, footer a {
+  color: #616161;
+}
+
+.social-icons svg {
+  font-size: 2.5rem;
+}
+
+.social-icons li + li {
+  margin-left: .5rem;
+}
+
+footer a {
+  text-decoration: underline;
+}

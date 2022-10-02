@@ -1,0 +1,32 @@
+@media screen and (max-width: 600px) {
+  .offer-items, .sub-offer-items, .explore-items {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-bar {
+    display: inline;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -25rem;
+    width: 25rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    transition: right .5s ease-in-out;
+  }
+
+  .nav-list.active {
+    right: 0rem;
+  }
+
+  .nav-list li + li {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
